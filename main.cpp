@@ -1,4 +1,6 @@
 // Gives area and circumference of a circle given a radius
+// Ethan Greenhouse 9/17
+
 // Library for input output commands
 #include <iostream>
 
