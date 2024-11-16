@@ -1,9 +1,15 @@
-This repository contains a collection of coding mini projects developed in C++.
+This repository contains a collection of mini projects developed in C++, showcasing both software and hardware integration.
 
 Projects:
-- Distance sensor to gear motor
-- Distance sensor to servo motor
-- Outfit selector
-- Vowel counter
-- Rock, paper, scissors
-- Chicken catch game
+1. Chicken Catch Game: A simple interactive game where the user guesses where to catch a chicken.
+2. Rock, Paper, Scissors: Classic rock, paper, scissors game where the user plays again the computer.
+3. Vowel Counter: Counts the number of vowels in a given string of text.
+4. Outfit Selector: Helps the user pick an outfit based on the temperature and weather.
+5. Distance Sensor to Servo Motor: Uses the input from the distance sensor to control a servo motor.
+6. Distance Sensor to Gear Motor: Uses the input from the distance sensor to control a gear motor.
+
+Technologies: 
+- C++
+- CLion
+- Arduino
+- Arduino IDE
