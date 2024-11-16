@@ -1,0 +1,3 @@
+C:/Users/ethan/CLionProjects/outfitSelector/cmake-build-debug/CMakeFiles/outfitSelector.dir
+C:/Users/ethan/CLionProjects/outfitSelector/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/ethan/CLionProjects/outfitSelector/cmake-build-debug/CMakeFiles/rebuild_cache.dir

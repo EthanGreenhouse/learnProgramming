@@ -1,0 +1,6 @@
+jeans
+sweatpants
+leggings
+chinos
+cargo_pants
+overalls

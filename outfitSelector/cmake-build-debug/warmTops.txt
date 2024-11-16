@@ -1,0 +1,6 @@
+short-sleeve_shirt
+tank_top
+polo_shirt
+hawaiian_shirt
+crop top
+sports_jersey

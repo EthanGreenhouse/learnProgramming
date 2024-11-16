@@ -1,0 +1,6 @@
+athletic_shorts
+skirt
+khakis
+swim_trunks
+linen_pants
+jean_shorts
