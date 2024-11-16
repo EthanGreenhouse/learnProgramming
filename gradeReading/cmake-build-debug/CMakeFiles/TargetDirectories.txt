@@ -1,0 +1,3 @@
+C:/Users/ethan/CLionProjects/gradeReading/cmake-build-debug/CMakeFiles/gradeReading.dir
+C:/Users/ethan/CLionProjects/gradeReading/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/ethan/CLionProjects/gradeReading/cmake-build-debug/CMakeFiles/rebuild_cache.dir
