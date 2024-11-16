@@ -1,5 +1,5 @@
 // Rock, paper, scissors game
-// Ethan Greenhouse 9/27
+// Ethan Greenhouse 9/27/2024
 
 // Library for input and output commands
 #include <iostream>
