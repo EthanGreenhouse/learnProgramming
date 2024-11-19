@@ -1,74 +1,56 @@
 // Distance sensor to servo motor
 // Ethan Greenhouse 11/15
 
-// Include the library for controlling servos
-#include <Servo.h>                
+// Distance sensor to servo
+#include <Servo.h>                // Include the servo library
 
-// Create a Servo object to control the servo motor
-Servo myServo;                    
+Servo myServo;                    // Create a servo object
 
-// Define pins for the ultrasonic distance sensor
-const int trigPin = 11;           // Trigger pin on the distance sensor
-const int echoPin = 12;           // Echo pin on the distance sensor
-
-// Variable to store the measured distance
-float distance = 0;               
+const int trigPin = 11;           // Connects to the trigger pin on the distance sensor
+const int echoPin = 12;           // Connects to the echo pin on the distance sensor
+float distance = 0;               // Stores the distance measured by the distance sensor
 
 void setup() {
-  // Attach the servo motor to pin 9
-  myServo.attach(9);              
-  // Start serial communication at 9600 baud rate for debugging
-  Serial.begin(9600);             
-  // Configure the trigger pin as an output
-  pinMode(trigPin, OUTPUT);       
-  // Configure the echo pin as an input
-  pinMode(echoPin, INPUT);        
-  // Initialize the servo to 0 degrees
-  myServo.write(0);               
+  myServo.attach(9);              // Connects the servo to pin 9 (ensure correct pin number)
+  Serial.begin(9600);             // Set up a serial connection with the computer
+  pinMode(trigPin, OUTPUT);       // The trigger pin will output pulses of electricity
+  pinMode(echoPin, INPUT);        // The echo pin will measure the duration of pulses coming back from the distance sensor
+  myServo.write(0);               // Set servo position to 0 degrees
 }
 
 void loop() {
-  // Measure the distance using the ultrasonic sensor
-  distance = getDistance();       
-
-  // Print the measured distance to the Serial Monitor
-  Serial.print(distance);         
-  Serial.println(" in");          
-
-  // Control the servo based on the measured distance
-  if (distance > 0 && distance <= 5) { 
-    // If an object is detected within 5 inches, move the servo to 180 degrees
-    myServo.write(180);           
-  } else if (distance > 5) {      
-    // If the object is further than 5 inches, reset the servo to 0 degrees
-    myServo.write(0);             
+  distance = getDistance();       // Variable to store the distance measured by the sensor
+  Serial.print(distance);         // Print the distance that was measured
+  Serial.println(" in");          // Print units after the distance
+ 
+  if (distance > 3) { // Ensure distance is valid and within range
+    myServo.write(180);           // Set servo position to 180 degrees when an object is detected
+  } else {                        // If the object is out of range
+    myServo.write(0);             // Reset the servo to 0 degrees
   }
 
-  // Add a short delay to smooth out sensor readings
-  delay(100);                     
+  delay(1000);                     // Delay 1s between each reading to smooth out readings
 }
 
-// Function to measure and return the distance using the HC-SR04 sensor
+// RETURNS THE DISTANCE MEASURED BY THE HC-SR04 DISTANCE SENSOR
 float getDistance() {
-  float echoTime;                  // Time for the pulse to bounce back
-  float calculatedDistance;        // Distance calculated from echo time
-
-  // Send a 10-microsecond pulse from the trigger pin
+  float echoTime;                         // Variable to store the time it takes for a ping to bounce off an object
+  float calculatedDistance;               // Variable to store the distance calculated from the echo time
+ 
+  // Send out an ultrasonic pulse that's 10 microseconds long
   digitalWrite(trigPin, HIGH);
-  delayMicroseconds(10);
+  //delayMicroseconds(10);
   digitalWrite(trigPin, LOW);
-
-  // Measure the duration of the pulse received at the echo pin, with a 30ms timeout
-  echoTime = pulseIn(echoPin, HIGH, 30000);  
-
-  // Check if a valid echo was received (no echo means timeout)
-  if (echoTime == 0) {             
-    return -1;                     // Return -1 to indicate no valid reading
+ 
+  echoTime = pulseIn(echoPin, HIGH, 30000);  // Use the pulseIn command with a 30ms timeout
+ 
+  // Check if a valid echo was received
+  if (echoTime == 0) {
+    return -1;  // Return -1 if no valid echo was detected
   }
-
-  // Calculate the distance in inches (for cm, divide echoTime by 58.0)
-  calculatedDistance = echoTime / 148.0;     
-
-  // Return the calculated distance
-  return calculatedDistance;      
+ 
+  // Calculate the distance of the object that reflected the pulse
+  calculatedDistance = echoTime / 148.0;     // Distance in inches (for distance in cm, use echoTime / 58.0)
+ 
+  return calculatedDistance;                 // Send back the calculated distance
 }
