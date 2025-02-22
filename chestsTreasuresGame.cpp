@@ -1,4 +1,4 @@
-// Checks and Treasures game
+// Chests and Treasures game
 // Ethan Greenhouse
 // 1/15/2025
 
