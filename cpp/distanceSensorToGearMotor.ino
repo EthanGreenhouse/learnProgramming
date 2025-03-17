@@ -1,5 +1,6 @@
 // Distance sensor to gear motor
-// Ethan Greenhouse 11/15
+// Ethan Greenhouse 
+// 11/15/2024
 
 // Define pins for the ultrasonic distance sensor
 const int trigPin = 6;       // Trigger pin on the distance sensor
