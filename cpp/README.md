@@ -1,4 +1,4 @@
-learnCPP
+# learnCPP
 This repository contains a collection of mini projects developed in C++, showcasing both software and hardware integration.
 
 Projects:
