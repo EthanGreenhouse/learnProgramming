@@ -1,5 +1,6 @@
 // Program to count the number of vowels in a given string
-// Ethan Greenhouse 10/29/2024
+// Ethan Greenhouse 
+// 10/29/2024
 
 // Includes the iostream library for input and output operations
 #include <iostream>
