@@ -1,5 +1,6 @@
 // Distance sensor to servo motor
-// Ethan Greenhouse 11/15
+// Ethan Greenhouse 
+// 11/15/2024
 
 // Distance sensor to servo
 #include <Servo.h>                // Include the servo library
