@@ -1,5 +1,6 @@
 // Outfit Selector
-// Ethan Greenhouse 11/1/2024
+// Ethan Greenhouse 
+// 11/1/2024
 
 // Library for input and output commands
 #include <iostream>     
