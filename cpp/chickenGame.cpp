@@ -1,5 +1,6 @@
 // Chicken catch game
-// Ethan Greenhouse 9/18/2024
+// Ethan Greenhouse 
+// 9/18/2024
 
 // Library for input and output commands
 #include <iostream>
