@@ -1,6 +1,6 @@
 # learnMATLAB
 
-This repository contains a collection of mini projects developed in MATLAB, showcasing numerical analysis, simulations, and data visualization.
+Contains a collection of mini projects developed in MATLAB, showcasing numerical analysis, simulations, and data visualization.
 
 ## Projects:
 
