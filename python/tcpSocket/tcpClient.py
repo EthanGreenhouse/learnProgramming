@@ -11,7 +11,6 @@ MESSAGE_TO_SEND = '12-23-56-5-95-3-55-24-9-34'
 EXPECTED_RESULT = 'RESULT:316'
 
 def main():
-    """Main function to run the TCP client."""
     print('Client program started.')
 
     # Create a TCP socket.
