@@ -9,8 +9,6 @@ Contains a collection of mini projects developed in MATLAB, showcasing numerical
 3.  **Temperature Change Simulation:** Predicts the cooling behavior of a hot drink placed in a refrigerator, utilizing Newton's Law of Cooling to model the temperature change over time.
 4.  **Beach Nourishment Simulation:** Models the dynamic evolution of a beach profile over time, employing sediment transport equations to simulate beach nourishment strategies.
 5.  **Ball Drop Experiment:** Compares experimental data collected from a ball drop experiment against theoretical predictions, analyzing the ball's height as a function of time.
-6.  **March Madness Bracket Generator:** Simulates March Madness tournament by generating a bracket based on team statistics, predicting the outcome of each game and the overall champion.
-
 
 ## Technologies:
 
