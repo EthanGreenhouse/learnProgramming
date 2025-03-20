@@ -10,7 +10,6 @@ SERVER_IDENTIFIER = (SERVER_ADDRESS, SERVER_PORT)
 MAX_QUEUE_CONNECTIONS = 5
 
 def main():
-    """Main function to run the TCP server."""
     print('Server started.')
 
     # Create server socket (IPv4, TCP)
